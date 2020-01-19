@@ -1,0 +1,121 @@
+.bl-background {
+    width: 96.5%;
+    background: #cdcbcb;
+    padding-top: 50px;
+    padding-left: 15%;
+    height: 50%;
+}
+
+.bl-list {
+    background: white;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    width: 50%;
+    min-width: 500px;
+    float: left;
+    border-radius: 2px;
+    height: 100%;
+    max-width: 800px;
+}
+
+.bl-bought {
+    background: white;
+    width: 70%;
+    float: left;
+    max-width: 500px;
+}
+
+/*Кнопки*/
+.bl-label {
+    background: #cdcbcb;
+    height:20px;
+    width: 300px;
+}
+.bl-plus {
+    background: #04a613;
+    border-radius: 60px;
+    height: 30px;
+    width: 30px;
+    margin-top: -5px;
+}
+
+.bl-minus {
+    background: #f09797;
+    border-radius: 60px;
+    height: 30px;
+    width: 30px;
+}
+
+.bl-row{
+    width: 100%;
+    float: left;
+    background: white;
+    border: 0.1px solid #cecccc;
+    max-width: 800px;
+    position: relative;
+}
+
+.bl-product{
+    width: 100px;
+}
+
+.bl-count{
+    width: ;
+}
+
+div{
+    float: left;
+}
+
+button{
+    border: none;
+    color: white;
+}
+
+.bl-product{
+    margin-left: 5px;
+    align-content: center;
+    margin-top: 15px;
+
+}
+.bt-buy{
+    color: black;
+    height: 30px;
+    width: 90px;
+    border-radius:4px;
+}
+
+.bt-del{
+    margin-left: 5px;
+    height: 30px;
+    width: 30px;
+    border-radius: 4px;
+    background-color: red;
+    float: right;
+}
+
+.bl-right{
+     float: right;
+    margin-top: -35px;
+    margin-right: 3%;
+    background: white;
+}
+
+.bt-add{
+    background: #1b86d1;
+    height: 32px;
+    width: 100px;
+    border-radius: 2px;
+    margin-left: -2%;
+}
+
+
+body{
+    background: #cbcbcb;
+}
+
+.bl-title{
+    border: 0.1px solid #cdcbcb;
+    width: 100%;
+}
+
