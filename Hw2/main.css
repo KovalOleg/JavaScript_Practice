@@ -153,6 +153,11 @@ body {
     width: 130px;
     height: 10%;
     transition: all 1s ease;
+    visibility: visible;
+}
+
+.banner-alt{
+    visibility: hidden;
 }
 
 .banner:hover {
@@ -163,20 +168,41 @@ body {
 
 @media print {
     .banner {
+        visibility: hidden;
+    }
+
+    .banner-alt{
+        visibility: visible;
         border: 3px solid #460569;
         background-color: white;
         color: black;
+        content: attr("Koval Oleh");
+
+        position: fixed;
+        top: 95%;
+        left: 5px;
+        border-radius: 10px;
+        width: 130px;
+        height: 10%;
     }
+
     .banner:hover {
         background-color: white;
         top: 85%;
         height: 20%;
+    }
+    .print {
+        content: attr(alternative);
     }
 }
 
 button {
     position: relative;
     /* Относительное позиционирование */
+}
+
+div div span{
+    content: attr(maint);
 }
 
 button::after {
