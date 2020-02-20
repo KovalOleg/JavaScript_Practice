@@ -1,11 +1,30 @@
-.1 {
+.but {
     width: 300px;
     height: 200px;
-    background: #30dddd;
+    background: #000000;
 }
 
 .govno {
     width: 200px;
     height: 400px;
     background: blue;
+}
+
+.background-class{
+    background-color: green;
+}
+
+.buy {
+    color: black;
+    height: 30px;
+    width: 90px;
+    border-radius: 4px;
+}
+
+.del {
+    margin-left: 5px;
+    height: 30px;
+    width: 30px;
+    border-radius: 4px;
+    background-color: red;
 }

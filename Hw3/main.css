@@ -1,11 +1,3 @@
-.bl-background {
-    width: 96.5%;
-    background: #cdcbcb;
-    padding-top: 50px;
-    padding-left: 15%;
-    height: 50%;
-}
-
 .bl-list {
     background: white;
     margin-bottom: 10px;
@@ -20,9 +12,18 @@
 
 .bl-bought {
     background: white;
-    width: 70%;
-    float: left;
+    width: 80%;
     max-width: 500px;
+    height: 45%;
+}
+
+.add-field {
+    margin-top: 14px;
+    border-radius: 4px;
+    height: 25px;
+    width: 74%;
+    max-width: 79%;
+    margin-left: 10px;
 }
 
 
@@ -39,11 +40,10 @@
     border-radius: 60px;
     height: 30px;
     width: 30px;
-    margin-top: -5px;
 }
 
 .bl-minus {
-    background: #f09797;
+    background: #ff0000;
     border-radius: 60px;
     height: 30px;
     width: 30px;
@@ -54,16 +54,19 @@
     float: left;
     background: white;
     border: 0.1px solid #cecccc;
-    max-width: 800px;
     position: relative;
+    height: 50px;
 }
 
 .bl-product {
     width: 100px;
+    margin-left: 5px;
 }
 
 .bl-count {
-    width: ;
+    margin-left: 25%;
+    margin-right: auto;
+    margin-top: 10px;
 }
 
 div {
@@ -76,7 +79,7 @@ button {
 }
 
 .bl-product {
-    margin-left: 5px;
+    margin-left: 10px;
     align-content: center;
     margin-top: 15px;
 }
@@ -99,26 +102,33 @@ button {
 
 .bl-right {
     float: right;
-    margin-top: -35px;
-    margin-right: 3%;
+    margin-top: -30px;
+    margin-right: 10px;
     background: white;
 }
 
 .bt-add {
     background: #1b86d1;
-    height: 32px;
-    width: 100px;
-    border-radius: 2px;
-    margin-left: -2%;
+    height: 25px;
+    width: 21.5%;
+    position: absolute;
+    border-radius: 0px 4px 4px 0px;
+    margin-top: 14px;
+    margin-right: 10px;
 }
 
 body {
     background: #cbcbcb;
 }
 
-.bl-title {
-    border: 0.1px solid #cdcbcb;
+.bl-title1 {
     width: 100%;
+    margin-left: 5px;
+}
+
+.bl-title2 {
+    width: 100%;
+    margin-left: 5px;
 }
 
 .round {
@@ -129,6 +139,7 @@ body {
     padding-left: 5px;
     padding-right: 5px;
     margin-right: 10px;
+    margin-bottom: 8px;
 }
 
 .number {
@@ -140,8 +151,27 @@ body {
     float: right;
 }
 
+.bl-background {
 
+    background: #cdcbcb;
+    padding-top: 50px;
+    margin-left: 25%;
+    display: block;
+    height: 50%;
+}
 /*-------------------------------------------*/
+
+@media (max-width: 1000px){
+    .bl-background {
+    width: 500px;
+}
+
+}
+@media (width: 700px){
+    .bl-background {
+        width: 500px;
+    }
+}
 
 .banner {
     color: white;
@@ -156,7 +186,7 @@ body {
     visibility: visible;
 }
 
-.banner-alt{
+.banner-alt {
     visibility: hidden;
 }
 
@@ -170,14 +200,12 @@ body {
     .banner {
         visibility: hidden;
     }
-
-    .banner-alt{
+    .banner-alt {
         visibility: visible;
         border: 3px solid #460569;
         background-color: white;
         color: black;
         content: attr("Koval Oleh");
-
         position: fixed;
         top: 95%;
         left: 5px;
@@ -185,7 +213,6 @@ body {
         width: 130px;
         height: 10%;
     }
-
     .banner:hover {
         background-color: white;
         top: 85%;
@@ -198,10 +225,16 @@ body {
 
 button {
     position: relative;
+    opacity: 0.85;
     /* Относительное позиционирование */
+    cursor: pointer;
 }
 
-div div span{
+button:hover {
+    opacity: 1;
+}
+
+div div span {
     content: attr(maint);
 }
 
@@ -210,8 +243,8 @@ button::after {
     /* Выводим текст */
     position: absolute;
     /* Абсолютное позиционирование */
-    width: 100px;
-    height: 25px;
+    width: 30px;
+    height: 15px;
     /* Ширина подсказки */
     left: 0;
     top: 0px;
@@ -236,8 +269,41 @@ button::after {
 button:hover::after {
     opacity: 1;
     /* Показываем подсказку */
-    width: 200px;
-    height: 50px;
+    width: 100px;
+    height: 30px;
     top: -5em;
     /* Положение подсказки */
+}
+
+
+/*---------------------------------------------------------*/
+
+.chGr {
+    background-color: black;
+}
+
+.becomePink {
+    background: #f09797;
+    opacity: 1;
+    cursor: default;
+}
+
+.bought {
+    text-decoration: line-through;
+}
+
+.destroy {
+    display: none;
+}
+
+.dissappear {
+    visibility: hidden;
+}
+
+.straigth {
+    margin-bottom: 15px;
+}
+
+.bigger{
+    width: 100px;
 }

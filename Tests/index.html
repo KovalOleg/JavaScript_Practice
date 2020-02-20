@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="main.js">
+    </script>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-        <div class="govno"></div>
+    <div class="bl-right">
+        <script>
+            $(document).ready(function () {
+                $(".buy").click(function () {
+                    $(".del").hide();
+                });
+            });
+        </script>
+        <button class="buy">Куплено</button>
+        <button class="del">×</button>
+    </div>
 </body>
+
 </html>
