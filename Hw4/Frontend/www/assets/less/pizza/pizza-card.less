@@ -1,0 +1,120 @@
+.pizza-card {
+    height: 600px;
+    padding-left: 15px;
+    padding-right: 15px;
+    img {
+        width: 100%;
+    }
+    h3 {
+        color: @mainColor;
+        //background-color: lighten(@mainColor, 45%);
+    }
+}
+
+body {
+    height: 5000px;
+    .menu {
+        @media(max-height: 50px) {
+            opacity: 0.85;
+        }
+    }
+}
+
+.d30 {
+    //    visibility: hidden;
+    margin-left: 5px;
+    z-index: 999999;
+    position: fixed;
+    width: 85px;
+    height: 0px;
+    border-width: 130px 50px 10px;
+    border-style: solid;
+    border-color: @lentColor @lentColor transparent;
+    span {
+        font-size: 20px;
+    }
+}
+
+.d30Bot{
+    &:extend(.d30);
+    transform: rotate(180deg);
+    bottom: 0px;
+}
+
+.lentach {
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    margin-top: -87px;
+    margin-left: -22px;
+    font-weight: bold;
+}
+
+.lentach2 {
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    margin-top: -127px;
+    margin-left: -26px;
+    font-weight: bold;
+     transform: rotate(180deg);
+}
+
+.menu {
+    z-index: 99998;
+    opacity: 0.85;
+    height: 100px;
+    overflow: hidden;
+    width: 100%;
+    span {
+        font-weight: bold;
+        margin-bottom: -30px;
+        margin-left: 50px;
+    }
+    .number {
+        margin-left: 150px;
+        font-size: 20px;
+    }
+    .less {
+        font-size: 14px;
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+    .access {
+        margin-top: -30px;
+        color: white;
+        background-color: @lentColor;
+        position: relative;
+    }
+    .pizzaText {
+        margin-left: 150px;
+        margin-bottom: 15px;
+        color: white;
+    }
+}
+
+.line {
+    height: 1px;
+    margin-left: 150px;
+    //    margin-right: 5px;
+    margin-top: 18px;
+    width: 100%;
+}
+
+.vis {
+    font-size: 20px;
+    @media (max-width: 992px) {
+        display: none;
+    }
+}
+
+.choose {
+    button {
+        color: orange;
+    }
+    .myactive {
+            background-color: orange;
+            color: white;
+        }
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Pizza</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootsrap CSS -->
+    <!--        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-- LESS основний файл -->
+    <link rel="stylesheet/less" type="text/css" href="assets/less/main.less" />
+    <!-- LESS JavaScript компілятор -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+</head>
+
+<body>
+    <div class="d30">
+        <div class="lentach">PIZZA <span>KMA</span></div>
+    </div>
+    <div class="d30Bot">
+        <div class="lentach2"> <span>Цього тижня на все</span>
+            <hr style="border: 1px dotted grey"> <span style="margin-left: 5px;">-20%</span> </div>
+    </div>
+    <div class="sticky-top bg-dark menu" style="color: grey;">
+        <div style="margin-top: 10px;"> <span class="number">(044) 222 5 222</span> <span class="less">24 години/ 7 днів на тиждень</span> <span class="vis"> Безкоштовна доставка піци </span> </div>
+        <div>
+            <button class="btn access float-right mr-3"> Ввійти </button>
+        </div>
+        <div class="bg-light col-10 line"></div>
+        <div style="margin-top: 10px;"><span class="pizzaText"> Піца </span></div>
+    </div>
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-12" style="font-weight: bold;">
+                <div class="h2" style="margin-left: 45%; width: 120px; float: left;">Усі піци</div>
+                <div style="width:50px; float: left; height: 100%;">
+                    <div class="rounded-circle text-center my-3" style=" height: 25px; font-size: 18px; color: white; width: 30px; background-color: orange; float: left;">3</div>
+                </div>
+            </div>
+            <!--            <div class="col-5"></div>--></div>
+        <div class="row choose">
+            <div class="col-lg-4 col-md-2 col-sm-1 col-xs-0"></div>
+            <div class="col-lg-8 col-md-10 col-sm-11 col-xs-12">
+                <ul>
+                    <button class="btn myactive"> Усі</button>
+                    <button class="btn"> М'ясні </button>
+                    <button class="btn"> З ананасами </button>
+                    <button class="btn"> З грибами </button>
+                    <button class="btn"> З морепродуктами </button>
+                    <button class="btn"> Вега </button>
+                </ul>
+            </div>
+            <!--            <div class="col-3"></div>--></div>
+    </div>
+    <div class="container">
+        <div class="row" id="pizza_list">
+            <div class="col-sm-6 col-md-4  mt-2">
+                <div class="thumbnail border pizza-card">
+                   <img src="assets/images/pizza_7.jpg" style="width: 100%;">
+                    <div class="position-absolute btn btn-danger" style="width: 80px; height: 30px; font-weight: bold; font-size: 18px; z-index: 99999; margin-left: -55px; margin-top: -20px;">
+                        <p style="margin-top: -5px;">Нова</p>
+                    </div>
+                    <div class="caption">
+                        <h3>Імпереза</h3> <small class="small" style="color:gray">М'ясна піца</small>
+                        <p>Балик, салямі, куриця, сир моцарелла, сир рокфорд, ананаси, томатна паста, петрушка</p>
+                    </div>
+                    <div>
+                        <img src="assets/images/size-icon.svg" alt="" style="width: 23,,30px; height: 20px;">
+                    </div>
+                    <div class="mx-5" style="position: absolute; bottom: 10px;"> <a href="#" class="btn" style="background-color: orange;">Купити</a> <a href="#" class="btn" style="bottom:45px; margin-left:70px;  background-color: orange; float:right;">
+                            Купити
+                        </a> </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 mt-2">
+                <div class="thumbnail pizza-card border">
+                   <img src="assets/images/pizza_2.jpg">
+                    <div class="position-absolute btn btn-success" style="width: 120px; height: 30px; font-weight: bold; font-size: 18px; z-index: 99999; margin-left: -95px; margin-top: -20px;">
+                        <p style="margin-top: -5px;">Популярна</p>
+                    </div>
+                    <div class="caption">
+                        <h3>BBQ</h3> <small class="small" style="color:gray">М'ясна піца</small>
+                        <p>Мисливські ковбаски, ковбаски папероні, шинка, сир домашній, шампіньйони, петрушка, оливки</p>
+                    </div>
+                    <div class="mx-5" style="position: absolute; bottom: 10px; "> <a href="#" class="btn" style="background-color: orange;">Купити</a> <a href="#" class="btn" style="bottom:45px; margin-left:70px;  background-color: orange; float:right;">
+                            Купити
+                        </a> </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 mt-2">
+                <div class="thumbnail pizza-card border"> <img src="assets/images/pizza_1.jpg">
+                    <div class="caption">
+                        <h3>Міксовий поло</h3> <small class="small" style="color:gray">М'ясна піца</small>
+                        <p>Вітчина, куриця копчена, сир моцарелла, ананаси, кукурудза, петрушка, соус томатний</p>
+                    </div>
+                    <div class="mx-5" style="position: absolute; bottom: 10px;"> <a href="#" class="btn" style="background-color: orange;">Купити</a>
+                           <a href="#" class="btn" style="bottom:45px; margin-left:70px;  background-color: orange; float:right; ">
+                            Купити
+                        </a> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery JavaScript -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js">
+    </script>
+    <!--Bootsrap JavaScript -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Own JavaScript -->
+    <!--<script type="text/javascript"  src="assets/js/main.js"> </script>-->
+</body>
+
+</html>
