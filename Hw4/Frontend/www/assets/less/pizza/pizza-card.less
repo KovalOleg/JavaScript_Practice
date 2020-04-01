@@ -1,23 +1,33 @@
 .pizza-card {
-    height: 600px;
+    height: 650px;
     padding-left: 15px;
     padding-right: 15px;
     img {
         width: 100%;
     }
-    h3 {
-        color: @mainColor;
-        //background-color: lighten(@mainColor, 45%);
-    }
+}
+
+button{
+//    box-shadow: -1px -19px 45px 7px #c0c0c0 inset;
 }
 
 body {
+    overflow-x: scroll;
     height: 5000px;
+h3 {
+        color: @mainColor;
+        //background-color: lighten(@mainColor, 45%);
+    }
+
     .menu {
         @media(max-height: 50px) {
             opacity: 0.85;
         }
     }
+}
+.btn-buy{
+    background-color: linear-gradient(to top, #000, #ec9400);
+    color:white;
 }
 
 .d30 {
@@ -34,6 +44,10 @@ body {
         font-size: 20px;
     }
 }
+
+.shadow1 {
+          box-shadow: -9px 0px 11px -1px #c0c0c0;
+   }
 
 .d30Bot{
     &:extend(.d30);
