@@ -1,7 +1,8 @@
 /**
  * Created by chaika on 25.01.16.
  */
-
+//var $clear = ("#clear");
+var $cart = $("#cart");
 var $All = ("#All");
 var $Meat = ("#Meat");
 var $Pineapples = ("#Pineapples");
@@ -18,6 +19,10 @@ $(function(){
 
     PizzaCart.initialiseCart();
     PizzaMenu.initialiseMenu();
+
+$(clear).on('click', function(){
+    PizzaCart.clearCart();
+});
 
 $(Meat).on('click', function(){
     $(choose).parent().find('.myactive').removeClass('myactive');
