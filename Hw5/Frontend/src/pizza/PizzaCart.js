@@ -62,14 +62,17 @@ function clearCart() {
 function removeFromCart(cart_item) {
     //Видалити піцу з кошика
     var time = [];
-    var i = 0;
-    for(i; i<Cart.length;i++){
-        if(Cart[i].pizza==cart_item.pizza){alert(Cart[i].pizza.title);} else {alert(Cart[i].pizza.title+" OK"); time.push(Cart[i]);}
-        Cart.shift();
+
+    while(Cart.lenght>0){
+        alert(Cart.pop());
+        var pizza1 = Cart.pop();
+        if(pizza1.title==cart_item.pizza.title && pizza1.size==cart_item.pizza.size){alert(Cart[i].pizza.title);} else {alert(Cart[i].pizza.title+" OK"); time.push(Cart[i]);}
     }
 
-    for(var j = 0; j<time.length;j++)
-        Cart.push(time[i]);
+    while(time.length>0){
+          Cart.push(time.pop());
+    }
+
 
     //Після видалення оновити відображення
     updateCart();
