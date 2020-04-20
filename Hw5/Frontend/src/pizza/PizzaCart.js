@@ -3,6 +3,7 @@
  */
 var Templates = require('../Templates');
 var quantity = 0;
+var summ = 0;
 var sum = $("#sum");
 //Перелік розмірів піци
 var PizzaSize = {
@@ -12,6 +13,7 @@ var PizzaSize = {
 
 //Змінна в якій зберігаються перелік піц в кошику
 var Cart = [];
+
 
 //HTML едемент куди будуть додаватися піци
 var $cart = $("#cart");
@@ -53,7 +55,9 @@ function clearCart() {
     //Видалити піцу з кошика
     Cart = [];
     $(zamov).text('0');
-    $(sum).text('0')
+    $(sum).text('0');
+    summ = 0;
+    quantity = 0;
     //Після видалення оновити відображення
     updateCart();
 }
@@ -61,19 +65,15 @@ function clearCart() {
 
 function removeFromCart(cart_item) {
     //Видалити піцу з кошика
-    var time = [];
-
-    while(Cart.lenght>0){
-        alert(Cart.pop());
-        var pizza1 = Cart.pop();
-        if(pizza1.title==cart_item.pizza.title && pizza1.size==cart_item.pizza.size){alert(Cart[i].pizza.title);} else {alert(Cart[i].pizza.title+" OK"); time.push(Cart[i]);}
-    }
-
-    while(time.length>0){
-          Cart.push(time.pop());
-    }
-
-
+//    alert(Cart[0].pizza.title);
+    Cart = Cart.filter(function(item) {
+//        alert(item.pizza.title+'\n'+cart_item.pizza.title+'\n'+item.size+'\n'+cart_item.size+'\n'+
+//              (item.pizza.title == cart_item.pizza.title && item.size == cart_item.size));
+        return !(item.pizza.title == cart_item.pizza.title && item.size == cart_item.size);
+    });
+//    alert('AAAAA1');
+//    alert('AAAAA2');
+//    alert(Cart.length);
     //Після видалення оновити відображення
     updateCart();
 
@@ -82,13 +82,17 @@ function removeFromCart(cart_item) {
 function initialiseCart() {
     //Фукнція віпрацьвуватиме при завантаженні сторінки
     //Тут можна наприклад, зчитати вміст корзини який збережено в Local Storage то показати його
-    if(localStorage.getItem('pizzas') == null)
+    if(localStorage.getItem("Cart") == null)
         $cart.html("");
     else{
 
+        Cart = JSON.parse(localStorage.getItem("Cart"));
+        $(sum).text(localStorage.getItem('summ'));
+        summ = parseInt(localStorage.getItem('summ'));
+        $(zamov).text(localStorage.getItem('quantity'));
+        quantity = parseInt(localStorage.getItem('quantity'));
+        updateCart();
     }
-
-
     updateCart();
 }
 
@@ -148,6 +152,7 @@ function updateCart() {
             var el2 = parseInt(cart_item.price);
             el = el-el2*cart_item.quantity;
             $(sum).text(el);
+//            alert('AAAAAAAA');
             removeFromCart(cart_item);
             //Оновлюємо відображення
             $(zamov).text(quantity);
@@ -155,9 +160,11 @@ function updateCart() {
         });
         $cart.append($node);
     }
-
+    summ = parseInt($(sum).text());
     Cart.forEach(showOnePizzaInCart);
-
+    localStorage.setItem('Cart', JSON.stringify(Cart));
+    localStorage.setItem('quantity', quantity);
+    localStorage.setItem('summ',summ);
 }
 
 exports.clearCart = clearCart;

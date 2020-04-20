@@ -2,6 +2,7 @@
  * Created by chaika on 25.01.16.
  */
 //var $clear = ("#clear");
+//var clearStorage = $("#clSt");
 var $cart = $("#cart");
 var $All = ("#All");
 var $Meat = ("#Meat");
@@ -19,6 +20,10 @@ $(function(){
 
     PizzaCart.initialiseCart();
     PizzaMenu.initialiseMenu();
+
+//$(clearStorage).on('click', function(){
+//    Storage.clear();
+//});
 
 $(clear).on('click', function(){
     PizzaCart.clearCart();
