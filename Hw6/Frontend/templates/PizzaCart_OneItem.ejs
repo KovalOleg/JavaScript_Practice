@@ -1,0 +1,40 @@
+ <div class="item">
+            <div class="border border-top-0 border-left-0 border-right-0 border-dark" style=" overflow: hidden; height: 100px;">
+                <h3 class="ml-5"><%= pizza.title %>
+                <%if(size=='small_size') {%>
+                (Мала)
+                <%} else {%>
+                (Велика)
+                <%}%></h3>
+            <div style="width=100%; ">
+            <img src="assets/images/size-icon.svg" alt="NF" class="ml-5"><%if(size=='small_size') {%>
+                <%=pizza.small_size.size%>
+                <%} else {%>
+                <%=pizza.big_size.size%>
+                <%}%> <img src="assets/images/weight.svg" alt="NF" class="ml-3">
+                <%if(size=='small_size') {%>
+                <%=pizza.small_size.weight%>
+                <%} else {%>
+                <%=pizza.big_size.weight%>
+                <%}%></div>
+            <span class="font-weight-bold ml-5"><%if(size=='small_size') {%>
+                <%=pizza.small_size.price * quantity%>
+                <%} else {%>
+                <%=pizza.big_size.price * quantity%>
+                <%}%>
+                грн</span>
+            <button class="minus btn rounded-circle btn-danger font-weight-bold" style="width: 20px; height: 25px; text-align: center; color: white;">-</button>
+            <span class="quant"><%=quantity%></span>
+            <button class="plus btn rounded-circle btn-success font-weight-bold" style="width: 20px; height: 25px;"><span style="margin-left: -5px; margin-top: -15px;">+</span></button>
+
+            <button class="cross btn rounded-circle btn-success font-weight-bold" id="cross" style="background-color:white; width: 20px; height: 25px; border-color:orange;"><span style="margin-left: -5px; bottom: 20px; color:black;">x</span></button>
+
+
+               <div style="overflow: hidden; position: absolute; right: 0px; height: 100px; width: 100px; margin-top: -100px;">
+
+                 <img src="<%=pizza.icon%>" style="width:100%; margin-left: 50%;">
+
+            </div>
+            </div>
+            </div>
+
