@@ -206,6 +206,8 @@ var $choose = ("#choose");
 var $ord = ("#ord");
 var $clear = ("#clear");
 
+
+
 $(function(){
     //This code will execute when the page is ready
     var PizzaMenu = require('./pizza/PizzaMenu');
@@ -218,12 +220,14 @@ $(function(){
 //    Storage.clear();
 //});
 
-var name1 = document.getElementById("name").oninput = inputName;
+
 var name = document.getElementById("name");
+var number = document.getElementById("number");
+var adress = document.getElementById("adress");
 
 
-function inputName() {
-    if (name.checkValidity())
+function sendName(){
+    if (!name.checkValidity() || name.value=="")
     {
         $("#name").addClass("is-invalid");
         $("#name").removeClass("is-valid");
@@ -232,6 +236,36 @@ function inputName() {
         $("#name").removeClass("is-invalid");
     }
 }
+function sendNum(){
+    if (!number.checkValidity() || number.value=="")
+    {
+        alert("A?");
+        $("#number").addClass("is-invalid");
+        $("#number").removeClass("is-valid");
+}else{
+    alert("B?");
+        $("#number").addClass("is-valid");
+        $("#number").removeClass("is-invalid");
+    }
+}
+
+    function sendAdress(){
+
+if (!adress.checkValidity() || adress.value=="")
+    {
+        $("#adress").addClass("is-invalid");
+        $("#adress").removeClass("is-valid");
+}else{
+        $("#adress").addClass("is-valid");
+        $("#adress").removeClass("is-invalid");
+    }
+    }
+
+$("#sendIn").on("click", function(){
+    sendName();
+    sendNum();
+    sendAdress();
+});
 
 $(clear).on('click', function(){
     PizzaCart.clearCart();
