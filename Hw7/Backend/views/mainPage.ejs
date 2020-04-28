@@ -1,0 +1,69 @@
+<% include common/header.ejs %>
+<div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-12 font-weight-bold">
+                <div class="h2 float-left" id='type_pizza'>Усі піци</div>
+                <div class="float-left" style="width:50px; height: 100%;">
+                     <div class="rounded-circle text-center float-left font-weight-bold" id='counter'>3</div>
+                </div>
+            </div>
+            <!--            <div class="col-5"></div>--></div>
+        <div class="row" id="choose">
+            <div class="col-lg-4 col-md-2 col-sm-1 col-xs-0"></div>
+            <div class="col-lg-8 col-md-10 col-sm-11 col-xs-12">
+                <ul>
+                    <button class="btn myactive" id="All"> Усі</button>
+                    <button class="btn" id="Meat"> М'ясні </button>
+                    <button class="btn" id="Pineapples"> З ананасами </button>
+                    <button class="btn" id="Mushrooms"> З грибами </button>
+                    <button class="btn" id="Sea"> З морепродуктами </button>
+                    <button class="btn" id="Vegetarian"> Вега </button>
+                </ul>
+            </div>
+            <!--            <div class="col-3"></div>--></div>
+    </div>
+    <div class="container">
+        <div class="row mt-5" id="pizza_list">
+
+        </div>
+    </div>
+
+
+<!--    -->
+<!--    -->
+<!--    -->
+
+
+
+    <div class="cart stinky-top shadow1" id="korb">
+        <div style="height:100px;">
+
+                <br>
+                <div class="h3 float-left ml-2 font-weight-bold mt-2" style="font-size: 26px;">Замовлення</div>
+                    <div class="rounded-circle text-center float-left font-weight-bold" id="zamov">0</div>
+
+
+            <a src="" class="small mr-3 mt-3" id="clear" style="color: gray; float: right;">Очистити замовлення</a></div>
+
+
+
+        <div id="cart">
+
+        </div>
+
+
+
+        <div style="height: 100px; bottom: 0px;">
+            <div style="margin-right: 60px;">
+                <div class="font-weight-bold float-right" style="width: 120px; margin-left: -80px; margin-top:     -10px;    font-size: 28px;">грн.</div>
+                <div class="font-weight-bold float-right" id="sum">0</div>
+            </div>
+            <div class="font-weight-bold mt-1 ml-1" style="width:150px;">Сума замовлення</div>
+            <br>
+            <a class="mt-1 btn btn-lg btn-warning rounded-border" style="margin-left: 10%; background-color: orange; width: 300px; color: white;" href='/order.html'>Замовити</a>
+        </div>
+    </div>
+
+
+
+<% include common/footer.ejs %>
